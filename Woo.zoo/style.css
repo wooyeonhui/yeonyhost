@@ -1,0 +1,209 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  font-style: normal;
+  text-decoration: none;
+	vertical-align: baseline;
+  color:#373737;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+div{outline: 1px solid green}
+/*option*/
+.fl{float: left; position: relative;}
+.fr{float: right; position: relative;}
+
+/*css reset*/
+.header{
+  position: fixed; top:0;
+  width:100%;
+  height: 32px;
+  background-color: #555;
+}
+.header li{
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+}
+.header li a{
+  line-height: 30px;
+  color:#eee;
+  text-align: center;
+  width:110px;
+  display: block;
+}
+
+.header li a:hover{
+  transition:.5s;
+  height: 27px;
+  font-weight: 700;
+  background-color:#eee;
+  border-bottom:5px solid #cc3;
+  color:#030;
+}
+/*nav*/
+.nav .nav_mobile{display: none;}
+
+.nav .nav_web_tablet_view{
+  background-color:rgba(153,153,153,.8);
+  position: fixed;top:32px;right: 0;
+}
+.nav .nav_web_tablet_view li{
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+}
+.nav .nav_web_tablet_view li a{
+  line-height: 50px;
+  width: 100px;
+  display: block;
+  text-shadow: 1px 1px;
+  color:#ddd; text-align: center;
+}
+.nav .nav_web_tablet_view li a:hover{
+  transition: 0.5s;
+  font-weight: 700;
+  color:#330; background-color: #ffe;
+}
+/*section logo more*/
+.section{
+  height: 3580px;
+}
+.logo{
+  width: 180px; height: 120px;
+  position: relative; top:30px;left: 50px;
+}
+.logo cite{
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 80px;
+}
+.logo strong{
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.78rem;
+}
+.more{
+  width: 180px; height: 120px;
+  bottom:100px; left: -150px;
+}
+.more cite{
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 80px;
+}
+.more strong{
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.78rem;
+}
+
+/*section 1*/
+.section_1{
+ height: 700px;
+ margin-top: 80px;
+}
+.section_1 .section_1_bgi{
+  width: 100%;height:750px;
+  position: absolute;top:30px;
+  z-index: -1;
+  background-color: #ddd;
+  background-image: url(http://i.imgur.com/gI771Mu.jpg);
+  background-repeat:no-repeat;background-position:  50% 30%;
+}
+/*section 2*/
+.section_2{
+  height: 700px;
+}
+.section_2 .section_2_personal{
+  width: 300px; height: 500px;
+  position: relative;left: 250px;
+}
+.section_2 .section_2_personal table{
+  text-align: left;
+  border-left: 3px solid #553;
+}
+.section_2 .section_2_personal table th{
+  display: block;
+  width: 150px;
+  font-size:1.2rem;
+  line-height: 40px;
+  border-bottom: 3px solid #993;
+}
+.section_2 .section_2_personal table td{
+  padding-left: 0 20px;
+  line-height: 38px;
+  border-bottom: 1px solid #996;
+}
+.section_2 .section_2_personal table td li{
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.section_2 .section_2_personal table td li a{
+  height: 40px;
+}
+.section_2 .section_2_personal table td li img{
+  width: 40px;
+}
+.section_2 .section_2_more{
+ right: 0;
+}
+
+/*section3*/
+.section_3{
+  height: 88px;
+  text-align: center;
+}
+.section_3 cite{
+  line-height: 88px;
+  font-size: 2rem;
+}
+/*section4*/
+.section_4{
+  height: 700px;
+}
+/*section5*/
+.section_5{
+  height: 700px;
+}
