@@ -1,0 +1,39 @@
+@media screen and (min-width:480px) and (max-width:769px){
+  .header{
+    height: 25px;
+  }
+  .header li a{
+    line-height: 25px;
+    color:#eee;
+    text-align: center; letter-spacing: 1px;
+    width:80px; display: block;
+    font-size:0.78rem;
+    text-transform: capitalize;
+  }
+  .header li a:hover{
+    transition:.5s;
+    height: 27px;
+    font-weight: 700;
+    background-color:#eee;
+    border-bottom:5px solid #dd7;
+    color:#330;
+  }
+  .nav .nav_mobile{
+    display: block;
+    width:100px;height: 70px;
+    background-color: #ddd;
+  }
+  .nav .nav_mobile span{
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #777;
+  }
+  .nav .nav_web_tablet_view{
+    display: none;
+  }
+  .section_1 .section_1_bgi{
+    top:25px;
+  }
+
+
+}

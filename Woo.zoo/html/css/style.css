@@ -1,340 +1,299 @@
-*{margin:0; padding:0; font-family:'Nanum Gothic';}
-a{text-decoration: none; color: black;}
-/* css reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+  font-style: normal;
+  text-decoration: none;
+	vertical-align: baseline;
+  color:#373737;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-header{
+/*option*/
+.fl{float: left; position: relative;}
+.fr{float: right; position: relative;}
+
+/*css reset*/
+.header{
   position: fixed; top:0;
-  width:100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width:100%;height: 32px;
+	z-index: 1;
+  background-color: #555;
 }
-header ul{
-  list-style: none;
-}
-header ul li{
-  display:inline-block;
+.header li{
+  display: inline-block;
+  *display: inline;
   *zoom:1;
 }
-header ul li{
-
-}
-header ul li:hover{
-  height:40px;
-  transition: .5s;
-  background-color: rgba(255,255,255,0.8);
-  border-bottom:8px solid green;
-  color:#0a3;
-}
-header ul li a{
-  text-decoration: none;
+.header li a{
+  line-height: 30px;
+  color:#eee;
   text-align: center;
-  width:100px;  height:40px;
-  display:block;
+  width:110px;
+  display: block;
+	text-transform: capitalize;
+}
+
+.header li a:hover{
+  transition:.5s;
+  height: 27px;
+  font-weight: 700;
+  background-color:#eee;
+  border-bottom:5px solid #daa;
+  color:#030;
+}
+/*nav*/
+.nav .nav_mobile{display: none;}
+
+.nav .nav_web_tablet_view{
+	z-index: 1;
+  background-color:rgba(153,153,153,.8);
+  position: fixed;top:32px;right: 0;
+}
+.nav .nav_web_tablet_view li{
+  display: inline-block;
+  *display: inline;
+  *zoom:1;
+}
+.nav .nav_web_tablet_view li a{
+  line-height: 50px;
+  width: 100px;
+  display: block;
+  text-shadow: 1px 1px;
+  color:#ddd; text-align: center;
+}
+.nav .nav_web_tablet_view li a:hover{
+  transition: 0.5s;
+  font-weight: 700;
+  color:#330; background-color: #ffe;
+}
+/*section logo more*/
+
+.logo{
+  width: 180px; height: 120px;
+  position: relative; top:30px;left: 50px;
+	background-color: rgba(255,250,250, 0.5);
+	border-radius:10px 0;
+	border-bottom: 2px solid #fff;
+}
+.logo cite{
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 80px;
+}
+.logo strong{
+  display: block;
+  text-align: center;
   line-height: 40px;
-  color:white; font-weight: bold;
+  font-size: 0.78rem;
 }
-header ul li a:hover{
-  color:#1a3;
+.more{
+	background-color: rgba(240,255,240, 0.5);
+	border-radius:0 10px;
+	border-bottom: 2px solid #fff;
+  width: 180px; height: 120px;
+  bottom:100px; left: -150px;
 }
-
-nav {
-  position: fixed;  right:80px;  top:80px;  z-index:1;
-  margin-bottom:-10px;
-  display:inline-block;
-  *zoom:1;
-  background-color:rgba(0,0,0,.2)
-}
-nav ul{
-  list-style: none; display:inline-block;
-  *zoom:1;
-}
-nav ul li{
-  display:inline-block;
-  *zoom:1;
-  float: left;
-  height:100px;
-}
-nav ul li:hover{
-  height:100px;
-  transition: .5s;
-  border-bottom:8px solid black;
-  background-color: rgba(255,255,255,0.7);
-}
-nav ul li a{
-  text-decoration: none;
+.more cite{
+  display: block;
   text-align: center;
-  width:100px;  height:100px;
-  display:block;
-  font-size:16px;  font-weight: bold; color:black;
-  line-height:100px;
+  font-size: 1.5rem;
+  line-height: 80px;
+	color: #633;
+}
+.more strong{
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.78rem;
 }
 
-nav ul li p{
-  text-indent: -9999px; font-size:0;
+.section{
+  height: 2580px;
 }
-nav a.menu{
-  width:0; height:0;
-  font-size: 0;
+/*section 1*/
+.section_1{
+ height: 600px;
+ margin-top: 80px;
 }
-
-/*podition-fixed nav*/
-article div[class^="section"]{display:block;}
-/*'section'들어간 class 모두 선택*/
-/*section 1 */
-article .section1{
-  margin:0 0; padding-top: 100px;
-  width:100%; height:700px;
-  overflow: hidden;
-}
-article .section1 .section1-log{
-  margin:150px 100px; text-align: center;
-  width: 200px; height:100px;
-  background-color:rgba(10,30,30,.5)
-}
-article .section1 .section1-log h2 a{
-  text-decoration: none; text-shadow:1px 1px #fff;
-  font-size: 30px; color:#ccc;
-}
-article .section1 .section1-log p{
-  line-height: 20px; font-size: 14px; font-weight: bold;
-}
-article .section1 .section1-bg-bgi{
-  position: absolute; top:0; z-index: -1;
-  width:100%; height:825px;
-  overflow: hidden;
+.section_1 .section_1_bgi{
+  width: 100%;height:750px;
+  position: absolute;top:30px;
+  z-index: -1;
+  background-color: #ddd;
   background-image: url(http://i.imgur.com/gI771Mu.jpg);
   background-repeat:no-repeat;background-position:  50% 30%;
 }
-/*이미지 바꾸기 webkit-background-size:cover;은 반응형에서 쓰자*/
-article .section1 .section1-bg-overlay{
-  outline: 1px solid tomato;
+/*section 2*/
+.section_2{
+  height: 500px;
+	background-color: #fdd;
 }
-/*이미지에 오버레이할 일러스트*/
-/*section 2  About me*/
-article .section2{
-  margin:0 0; padding-top: 20px;
-  width:100%; height:600px;
+.section_2 .section_2_personal{
+  width: 350px; height: 200px;
+  position: relative;left: 250px;
+	background-color: rgba(240, 240, 240, 0.8);
 }
-article .section2 .section2-logo{
-  margin-top:20px; margin-left:100px;
-  text-align: center;
-  width: 200px; height:100px;
-  background-color:rgba(10,30,30,.5)
+.section_2 .section_2_personal table{
+  text-align: left;
+  border-left: 3px solid #553;
+
 }
-article .section2 .section2-logo h2 a{
-  text-decoration: none;text-shadow:1px 1px #fff;
-  color:#ccc;; font-size: 30px; line-height: 60px;
+.section_2 .section_2_personal table th{
+  display: block;
+  width: 150px;
+  font-size:1.2rem;
+  line-height: 40px;
+  border-bottom: 3px solid #933;
 }
-article .section2 .section2-logo span{
-  line-height: 20px; font-size: 14px; font-weight: bold;
+.section_2 .section_2_personal table td{
+  padding-left: 0 20px;
+  line-height: 38px;
+  border-bottom: 1px solid #a99;
 }
-article .section2 .section2-personal{
-  margin-left:100px;
+.section_2 .section_2_personal table td li{
+  height: 40px;
+  display: inline-block;
   vertical-align: middle;
-  display: inline-block;
-  *zoom:1;
-  width:20%; height:380px;
 }
-article .section2 .section2-personal table{
-  width:400px; height:200px;
-  text-align: left; line-height: 1.5;
-  border-left: 3px solid gray;
+.section_2 .section_2_personal table td li a{
+  height: 40px;
 }
-article .section2 .section2-personal table th{
-  vertical-align:middle;
-  border-bottom: 1px solid gray;
-}
-article .section2 .section2-personal table td{
-  padding-left: 20px;
-  vertical-align:middle;
-  border-bottom: 1px solid gray;
-}
-article .section2 .section2-personal table td li{
-  display: inline-block;
-}
-article .section2 .section2-personal table td li img{
+.section_2 .section_2_personal table td li img{
   width: 40px;
 }
-article .section2 .section2-image{
-  position:absolute; z-index:-1;
-  display: inline-block;
-  *zoom:1;
-  width: 60%; height: 380px;
-  background-color: powderblue;
-}
-article .section2 .section2-more{
-  margin: 400px 220px 0 0;
-  width:100px; height:60px;
-  float:right;
-  background-color:powderblue;
-  text-align:center;
-  border-top:3px solid #55d
-}
-article .section2 .section2-more a{
-  text-decoration: none;
-  font-size:20px; color:#499; font-weight: bold;
-  text-shadow:1px 1px #fff; line-height:28px;
-}
-/*여니 이미지 2넣기*/
-/*section 3 -문구 샵입-*/
-article .section3{
-  margin:20px 0;
-  width:100%; height:80px;
-  text-align: center;
-  background-color:rgba(10,30,30,.5)
-}
-article .section3 span{
-  font-size: 30px; line-height:80px;
-}
-/* section 4 -SKILLS-*/
-article .section4{
-  margin:0 0;
-  width:100%; height:700px;
-}
-article .section4 .section4-logo{
-  margin-left: 100px;
-  text-align: center;
-  width: 200px; height:100px;
-  background-color:rgba(10,30,30,.5)
-}
-article .section4 .section4-logo h2 a{
-  color:#ccc;; font-size:30px;
-  text-shadow:1px 1px #fff;
-  text-decoration: none; line-height: 60px;
-}
-article .section4 .section4-logo p{
-  line-height: 20px; font-size: 14px; font-weight: bold;
-}
-/* 3x2 grid-list */
-article .section4 .section4-skills{
-  margin:0 auto;
-  width:80%; height:600px;
-}
-                                    /*overflow: hidden;*/
-article .section4 .section4-skills ul{
-  list-style: none;
-  margin-top:20px;width:100%;
-  background-color:#ccc;
-}
-article .section4 .section4-skills li{
-  margin:10px;
-  display: inline-block;
-  *zoom:1;
-  width:250px; height:250px;
-  background-color:white;
-}
-article .section4 .section4-skills li p{
-  display: inline-block;
-  *zoom:1;
-  width:100%;
-  color:white; font-weight: 300;
-  text-align: center; text-shadow:2px 2px black;
-  background-color:gray;
-}
-article .section4 .section4-skills li span{
-  display:block;
-}
-article .section4 .section4-more{
-  float:right;position:relative;top:-100px;right:20px;
-  width:100px; height:60px;
-  text-align: center;border-radius:10px 10px;border-top:3px solid tomato
-  background-color:rgba(255,200,200,.8);
-}
-article .section4 .section4-more a{
-  text-decoration: none; line-height:28px;text-shadow:1px 1px #777;
-  font-size:20px; color:#fff; font-weight: bold;
-}
-/*여니 이미지 2넣기*/
-/*section 5 포트폴리오*/
-article .section5{
-  margin:0 0; padding-top: 20px;
-  width:1500px; height:700px;
-}
-article .section5 .section5-logo{
-  width: 200px; height:100px; position: relative;
-  margin-left:100px;
-  text-align: center;
-  background-color:rgba(10,30,30,.5);
-}
-article .section5 .section5-logo h2 a{
-  text-decoration: none; line-height: 60px;text-shadow:1px 1px #fff;
-  color:#ccc; font-size: 30px;
-}
-article .section5 .section5-logo span{
-  line-height: 20px;
-  font-size: 14px; font-weight: bold;
-}
-article .section5 .section5-images{
-  position:relative; left:300px;top:-40px;
-  display: inline-block;
-  *zoom:1; margin-left: 50px;
-  width:1000px; height:600px;
-}
-article .section5 .section5-images ul{
-  width:1300px;
-  list-style:none; display: inline-block;
-  *zoom:1;
-}
-article .section5 .section5-images ul li{
-  display: inline-block;
-  *zoom:1;
-}
-article .section5 .section5-images ul li.i1{
-  position: relative; left:0;top:0;
-  width:350px; height:200px;
-  margin:10px 0;
-  outline: 1px solid black; background-color: powderblue;
-}
-article .section5 .section5-images ul li.i1 img{
-  width: 350px; height:200px;
-  overflow: hidden;
-}
-article .section5 .section5-images ul li.i1 a{
-  display: block;
-  width: 350px; height:200px;
-  text-indent: -9999px; font-size:0;
-}
-article .section5 .section5-images ul li.i2{
-  position: relative;right:20px;top:-10px;
-  width: 550px; height: 300px;
-  margin:10px 0;
-  outline: 1px solid black;
-}
-article .section5 .section5-images ul li.i2 img{
-  width: 550px; height:300px;
-  overflow: hidden;
-}
-article .section5 .section5-images ul li.i2 a{
-  position: relative; top:-305px;
-  display: block;
-  width: 550px; height:300px;
-  text-indent: -9999px; font-size:0;
+.section_2 .section_2_more{
+ right: 0;
 }
 
-article .section5 .section5-more{
-  position:relative; z-index:1; top:500px; right:190px;
-  float:right; width:100px; height:60px;
-  text-align: center;
-  border-top:3px solid black
-  background-color:rgba(50,200,150,.8);
+/*section3*/
+.section_3{
+  height: 88px;
+	background-color: #333;
 }
-article .section5 .section5-more a{
-  text-decoration: none; line-height:28px;text-shadow:1px 1px #fff;
-  font-size:20px; color:gray; font-weight: bold;
+.section_3 cite{
+	display: block;
+	text-align: center;
+	width: 100%;
+  line-height: 88px;
+  font-size: 2rem;
+	color: #ddd;
+}
+/*section4*/
+.section_4{
+  height: 700px;
+	background-color: #ddd;;
+}
+.section_4 .section_4_skills{
+	position: relative;top:35px;
+  width:1200px;height: 500px;
+	margin: 0 auto;
+	background-color:rgba(250,200,200, 0.80);
+}
+.section_4 .section_4_skills li{
+	outline: 1px solid #777;
+	border-bottom: 5px solid #ccc;
+	display: inline-block;
+	width:180px;height:145px;
+	margin:7px 20px;
+	background-color: #eee;
+}
+.section_4 .section_4_skills li cite{
+	display: block;
+	text-align: center;
+	font-weight: 600;
+	line-height: 20px;
+}
+.section_4 .section_4_skills li strong{
+	display: block;
+	height: 125px;
 }
 
-footer{
-  position: fixed; bottom:0;
-  width: 100%;
-  background-color: black;
+/*section5*/
+.section_5{
+  height: 700px;
+	background-color: #ccc;
 }
-footer div{
-  text-align: center;
+.section_5 .section_5_thumbnail{
+	position: relative; top:35px;
+	width: 1200px;height: 500px;
+	margin: 0 auto;
 }
-footer div span{
-  color:white;
+.section_5 .section_5_thumbnail_beauty{
+	height:300px;
+	text-align: center;
+	background-color:rgba(255,190,190, 0.5);
 }
-/*반응형*/
-/* -1.위치 (position& margin& padding& outline)
-   -2.크기&속성(width& height& inline-block..)
-   -3.색&폰트(bgc& font)
-*/
+.section_5 .section_5_thumbnail_beauty li{
+	display: inline-block;
+	margin-top: 10px;
+}
+.section_5 .section_5_thumbnail_beauty li a{
+	outline: 1px solid #333;
+	display: inline-block;
+	width: 500px;height: 280px;
+}
+.section_5 .section_5_thumbnail_ang{
+	height: 220px;
+	text-align: center;
+	background-color: rgba(235,210,210, 0.3);
+
+}
+.section_5 .section_5_thumbnail_ang li{
+	display: inline-block;
+	margin-top: 10px;
+}
+.section_5 .section_5_thumbnail_ang li a{
+	outline: 1px solid #333;
+	display: inline-block;
+  width: 200px;height: 200px;
+}
+
+.footer{
+	background-color: #111;
+	text-align: center;
+	position:relative;bottom:0;
+}
+.footer cite{
+	display: block;
+	color: #eee;
+}
+.footer strong{
+	color: #ddd;
+}
